@@ -1,0 +1,55 @@
+{
+  "entities": {
+    "DailyLeaderboardEntry": {
+      "title": "Daily Leaderboard Entry",
+      "description": "Represents a completed Daily Challenge score entry on the global leaderboard.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique entry identifier",
+          "maxLength": 128
+        },
+        "playerName": {
+          "type": "string",
+          "description": "Display name of the player",
+          "maxLength": 30,
+          "minLength": 1
+        },
+        "score": {
+          "type": "number",
+          "description": "Score achieved in the daily challenge"
+        },
+        "linesCleared": {
+          "type": "number",
+          "description": "Total lines cleared during the challenge"
+        },
+        "maxCombo": {
+          "type": "number",
+          "description": "Maximum combo multiplier achieved"
+        },
+        "dateKey": {
+          "type": "string",
+          "description": "Challenge date key (YYYY-MM-DD)",
+          "maxLength": 10
+        },
+        "userId": {
+          "type": "string",
+          "description": "Firebase user ID or unique device client ID",
+          "maxLength": 128
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Server creation timestamp"
+        }
+      },
+      "required": ["id", "playerName", "score", "linesCleared", "maxCombo", "dateKey", "userId"]
+    }
+  },
+  "firestore": {
+    "/daily_leaderboard/{entryId}": {
+      "schema": "DailyLeaderboardEntry",
+      "description": "Collection of daily challenge high score entries for public global leaderboard ranking."
+    }
+  }
+}

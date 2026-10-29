@@ -1,0 +1,6 @@
+{
+  "name": "Block Quest - Premium Android Block Puzzle Game",
+  "description": "An original, high-performance 8x8 block puzzle game with 100+ levels, Classic endless mode, Daily Challenge, Time Attack, rich animations, synthesized audio, haptics, and complete Kotlin/Jetpack Compose source code.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
